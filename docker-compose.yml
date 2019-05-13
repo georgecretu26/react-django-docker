@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  frontend: 
+    build: ./frontend
+    environment: 
+      - NODE_ENV=production
+    command: > 
+      sh -c "npm start"
+    ports:
+      - 3000:3000
+    volumes: 
+      - ./frontend:/app/frontend/
+  
+  backend: 
+    build: ./backend
+    ports: 
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend/
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
