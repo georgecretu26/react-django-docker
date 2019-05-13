@@ -1,0 +1,16 @@
+@footer-height: 50px;
+@nav-height: 48px;
+@content-margin-bottom: @footer-height + @nav-height;
+
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.footer{height: @footer-height;}
+
+.content{
+  min-height: calc(100% - @content-margin-bottom);
+  margin-bottom: -@footer-height;
+  padding-bottom: @footer-height;
+}
