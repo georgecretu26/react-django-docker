@@ -6,11 +6,10 @@ var year = returnYear();
 
 class Footer extends Component {
   render(){
-    console.log(year);
     return(
-      <div className="footer" >
-                &copy; {year}
-      </div>
+      <footer className="footer" >
+        &copy; {year}
+      </footer>
     );
   }
 }

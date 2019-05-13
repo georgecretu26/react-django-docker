@@ -18,7 +18,7 @@ class Projects extends Component{
         const { data: projects } = result;
         this.setState({ projects });
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log(err));
   }
 
   render(){
