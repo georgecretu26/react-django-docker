@@ -1,9 +1,27 @@
-.nav{
-    list-style-type: none;
-        background-color: aliceblue;
+@import './../../styleguide/styleguide.less';
 
-        li{
-            display: inline-block;
-            padding: 15px 20px;
-        }
+.nav{
+  list-style-type: none;
+  background-color: @SlateGray;
+
+  li{
+    display: inline-block;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-weight: @FontWeightSemibold;
+    a{
+      color: @FountainBlue;
+      padding-bottom: 2px;
+      padding: 10px;
+    }
+    a:hover{
+      border-bottom: 1px solid @Orange;
+    }
+
+    .emphasized{
+      background-color: @Orange;
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
